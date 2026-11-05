@@ -1,0 +1,169 @@
+{
+  "author": "aktujo",
+  "license": "MIT",
+  "name": "Research",
+  "names": {
+    "de": "Forschung"
+  },
+  "description": "Research papers and preprints: authors, journal, year, DOI, arXiv identifier.",
+  "descriptions": {
+    "de": "Wissenschaftliche Artikel und Preprints: Autorinnen und Autoren, Zeitschrift, Jahr, DOI, arXiv-Kennung."
+  },
+  "tags": [
+    "science",
+    "papers"
+  ],
+  "kinds": [
+    {
+      "id": "paper",
+      "name": "Research paper",
+      "names": {
+        "de": "Paper"
+      },
+      "fields": [
+        {
+          "key": "authors",
+          "name": "Authors",
+          "names": {
+            "de": "Autoren"
+          },
+          "type": "text",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "authors",
+                "author",
+                "autoren"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "journal",
+          "name": "Journal",
+          "names": {
+            "de": "Zeitschrift"
+          },
+          "type": "text",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "journal",
+                "published in",
+                "proceedings of",
+                "zeitschrift"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "doi",
+          "name": "DOI",
+          "type": "text",
+          "code": true,
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "doi",
+                "https doi org"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "arxiv",
+          "name": "arXiv",
+          "type": "text",
+          "code": true,
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "arxiv"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "published",
+          "name": "Published",
+          "names": {
+            "de": "Veröffentlicht"
+          },
+          "type": "date",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "published",
+                "published online",
+                "veröffentlicht"
+              ]
+            }
+          ]
+        }
+      ],
+      "words": [
+        {
+          "word": "abstract",
+          "weight": 4
+        },
+        {
+          "word": "zusammenfassung",
+          "weight": 2
+        },
+        {
+          "word": "introduction",
+          "weight": 2
+        },
+        {
+          "word": "einleitung",
+          "weight": 2
+        },
+        {
+          "word": "references",
+          "weight": 2
+        },
+        {
+          "word": "literatur",
+          "weight": 2
+        },
+        {
+          "word": "doi",
+          "weight": 3
+        },
+        {
+          "word": "arxiv",
+          "weight": 4
+        },
+        {
+          "word": "keywords",
+          "weight": 2
+        },
+        {
+          "word": "conclusion",
+          "weight": 2
+        },
+        {
+          "word": "journal",
+          "weight": 1
+        },
+        {
+          "word": "proceedings",
+          "weight": 2
+        }
+      ],
+      "title": [
+        [
+          "authors"
+        ],
+        [
+          "published"
+        ]
+      ]
+    }
+  ]
+}

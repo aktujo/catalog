@@ -1,0 +1,171 @@
+{
+  "author": "aktujo",
+  "license": "MIT",
+  "name": "Library",
+  "names": {
+    "de": "Bibliothek"
+  },
+  "description": "The books of a collection: title, author, publisher, year, ISBN.",
+  "descriptions": {
+    "de": "Die Bücher einer Sammlung: Titel, Autorin oder Autor, Verlag, Jahr, ISBN."
+  },
+  "tags": [
+    "books",
+    "collection"
+  ],
+  "kinds": [
+    {
+      "id": "book",
+      "name": "Book",
+      "names": {
+        "de": "Buch"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "name": "Title",
+          "names": {
+            "de": "Titel"
+          },
+          "type": "text",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "title",
+                "titel"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "author",
+          "name": "Author",
+          "names": {
+            "de": "Autor"
+          },
+          "type": "text",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "author",
+                "by",
+                "autor",
+                "autorin",
+                "von"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "publisher",
+          "name": "Publisher",
+          "names": {
+            "de": "Verlag"
+          },
+          "type": "text",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "publisher",
+                "published by",
+                "verlag"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "year",
+          "name": "Year",
+          "names": {
+            "de": "Jahr"
+          },
+          "type": "number",
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "copyright",
+                "©",
+                "first published",
+                "erstmals erschienen"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "isbn",
+          "name": "ISBN",
+          "type": "text",
+          "code": true,
+          "find": [
+            {
+              "way": "label",
+              "labels": [
+                "isbn 13",
+                "isbn 10",
+                "isbn"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "read",
+          "name": "Read",
+          "names": {
+            "de": "Gelesen"
+          },
+          "type": "flag"
+        }
+      ],
+      "words": [
+        {
+          "word": "isbn",
+          "weight": 6
+        },
+        {
+          "word": "all rights reserved",
+          "weight": 2
+        },
+        {
+          "word": "alle rechte vorbehalten",
+          "weight": 2
+        },
+        {
+          "word": "printed in",
+          "weight": 2
+        },
+        {
+          "word": "gedruckt in",
+          "weight": 2
+        },
+        {
+          "word": "first published",
+          "weight": 2
+        },
+        {
+          "word": "erstausgabe",
+          "weight": 2
+        },
+        {
+          "word": "verlag",
+          "weight": 2
+        },
+        {
+          "word": "publisher",
+          "weight": 2
+        }
+      ],
+      "title": [
+        [
+          "author"
+        ],
+        [
+          "title"
+        ]
+      ]
+    }
+  ]
+}

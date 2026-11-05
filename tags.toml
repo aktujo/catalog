@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT
+# The tags templates may use – add new ones here in the same pull request.
+
+[tags]
+household = "papers of a household"
+letters = "letters and correspondence"
+money = "invoices, receipts, payslips"
+books = "books and their editions"
+collection = "a collection of things"
+science = "science and research"
+papers = "research papers and preprints"

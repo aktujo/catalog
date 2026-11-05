@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "source": {
+    "name": "aktujo",
+    "description": "The official aktujo templates of kinds of documents, reviewed by the aktujo team.",
+    "homepage": "https://github.com/aktujo/catalog"
+  },
+  "tags": {
+    "household": "papers of a household",
+    "letters": "letters and correspondence",
+    "money": "invoices, receipts, payslips",
+    "books": "books and their editions",
+    "collection": "a collection of things",
+    "science": "science and research",
+    "papers": "research papers and preprints"
+  },
+  "templates": [
+    {
+      "id": "aktujo.library",
+      "author": "aktujo",
+      "path": "templates/aktujo/library/template.json",
+      "sha256": "8deee9e02823d0a91a63a786334f1b8385f3e74f17014195868dbdfd578724ec",
+      "license": "MIT",
+      "name": "Library",
+      "names": {
+        "de": "Bibliothek"
+      },
+      "description": "The books of a collection: title, author, publisher, year, ISBN.",
+      "descriptions": {
+        "de": "Die Bücher einer Sammlung: Titel, Autorin oder Autor, Verlag, Jahr, ISBN."
+      },
+      "tags": [
+        "books",
+        "collection"
+      ],
+      "kinds": [
+        {
+          "id": "book",
+          "name": "Book",
+          "names": {
+            "de": "Buch"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aktujo.paperwork",
+      "author": "aktujo",
+      "path": "templates/aktujo/paperwork/template.json",
+      "sha256": "37d2827f182bc267f4de4e4d80fe2a3681215cc094ab90c06ddeb2820ddb5a7e",
+      "license": "MIT",
+      "name": "Paperwork",
+      "names": {
+        "de": "Papierkram"
+      },
+      "description": "The papers of a household: letters, contracts, official notices, invoices, receipts, insurance policies and payslips – who sent them, when, a reference, an amount. Words in German, English, French, Italian, Spanish and Dutch.",
+      "descriptions": {
+        "de": "Die Papiere eines Haushalts: Briefe, Verträge, Bescheide, Rechnungen, Quittungen, Versicherungsscheine und Gehaltsabrechnungen – wer sie geschickt hat, wann, ein Zeichen, ein Betrag. Wörter auf Deutsch, Englisch, Französisch, Italienisch, Spanisch und Niederländisch."
+      },
+      "tags": [
+        "household",
+        "letters",
+        "money"
+      ],
+      "kinds": [
+        {
+          "id": "letter",
+          "name": "Letter",
+          "names": {
+            "de": "Brief"
+          }
+        },
+        {
+          "id": "contract",
+          "name": "Contract",
+          "names": {
+            "de": "Vertrag"
+          }
+        },
+        {
+          "id": "notice",
+          "name": "Official notice",
+          "names": {
+            "de": "Bescheid"
+          }
+        },
+        {
+          "id": "invoice",
+          "name": "Invoice",
+          "names": {
+            "de": "Rechnung"
+          }
+        },
+        {
+          "id": "receipt",
+          "name": "Receipt",
+          "names": {
+            "de": "Beleg"
+          }
+        },
+        {
+          "id": "policy",
+          "name": "Insurance policy",
+          "names": {
+            "de": "Versicherungsschein"
+          }
+        },
+        {
+          "id": "payslip",
+          "name": "Payslip",
+          "names": {
+            "de": "Lohnabrechnung"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aktujo.research",
+      "author": "aktujo",
+      "path": "templates/aktujo/research/template.json",
+      "sha256": "8abf05230a226af9bb6453c4402a2fcd79519814d1d2464bc15511109d5c4489",
+      "license": "MIT",
+      "name": "Research",
+      "names": {
+        "de": "Forschung"
+      },
+      "description": "Research papers and preprints: authors, journal, year, DOI, arXiv identifier.",
+      "descriptions": {
+        "de": "Wissenschaftliche Artikel und Preprints: Autorinnen und Autoren, Zeitschrift, Jahr, DOI, arXiv-Kennung."
+      },
+      "tags": [
+        "science",
+        "papers"
+      ],
+      "kinds": [
+        {
+          "id": "paper",
+          "name": "Research paper",
+          "names": {
+            "de": "Paper"
+          }
+        }
+      ]
+    }
+  ]
+}

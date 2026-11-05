@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MIT
+# This source – what aktujo shows for it and in its settings. A fork or an own catalog changes these values
+# (FORKING.md).
+
+name = "aktujo"
+description = "The official aktujo templates of kinds of documents, reviewed by the aktujo team."
+homepage = "https://github.com/aktujo/catalog"
+
+# Licences a template here may use (SPDX identifiers); empty = any
+licenses = ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "MPL-2.0", "0BSD", "Unlicense", "CC0-1.0", "CC-BY-4.0"]
