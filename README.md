@@ -83,7 +83,10 @@ The kinds are exactly the JSON of a kind in aktujo – the same as in the events
 - **`type`:** `text`, `date`, `money`, `number` or `flag`.
 - **`find`:** the ways to find a field in the text, tried in order – `label` (the value after one of the labels),
   `largest` (the largest value after any of them), `first` (the first value of the type on the first page), `sender`
-  (the name in the letterhead with one of the markers, else the topmost line), `present` (yes, if a phrase occurs).
+  (the name in the letterhead with one of the markers, else the topmost line), `present` (yes, if a phrase occurs),
+  `tallest` (the line with the tallest letters on the first page, within an `area` if given) and `within` (the first
+  value of the type within an `area` of the first page) – an `area` is `left`, `top`, `right`, `bottom` in thousandths
+  of the page; these two need aktujo 0.4.
   `code: true` keeps only the first word with a digit – a number or reference.
 - **`words`:** words and phrases that speak for the kind, matched as whole words in any case, with whole weights; a
   kind is suggested from a sum of 6.

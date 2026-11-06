@@ -33,7 +33,27 @@ IDENTITY = re.compile(r"^[a-z0-9._-]{1,64}$")
 FOLDER = re.compile(r"^[a-z0-9][a-z0-9-]{0,62}$")
 AUTHOR = re.compile(r"^[A-Za-z0-9][A-Za-z0-9-]{0,38}$")
 TYPES = {"text", "date", "money", "number", "flag"}
-WAYS = {"label": "labels", "largest": "labels", "sender": "markers", "present": "phrases", "first": None}
+WAYS = {
+    "label": "labels",
+    "largest": "labels",
+    "sender": "markers",
+    "present": "phrases",
+    "first": None,
+    "tallest": None,
+    "within": None,
+}
+# The ways that look in an area of the page: whether they need one.
+AREA_WAYS = {"tallest": False, "within": True}
+
+
+def area_ok(area):
+    """A part of a page in thousandths: whole numbers 0 to 1000, the edges in order."""
+    edges = ("left", "top", "right", "bottom")
+    if not isinstance(area, dict) or set(area) != set(edges):
+        return False
+    if not all(isinstance(area[e], int) and not isinstance(area[e], bool) and 0 <= area[e] <= 1000 for e in edges):
+        return False
+    return area["left"] < area["right"] and area["top"] < area["bottom"]
 TEMPLATE_KEYS = {"author", "license", "name", "names", "description", "descriptions", "tags", "homepage", "kinds"}
 KIND_KEYS = {"id", "name", "names", "fields", "words", "title"}
 FIELD_KEYS = {"key", "name", "names", "type", "code", "find"}
@@ -87,6 +107,8 @@ def check_kind(kind, where, errors):
             member = WAYS[way["way"]]
             if member and not strings(way.get(member)):
                 errors.append(f"{at}: the way {way['way']} needs {member}")
+            if way["way"] in AREA_WAYS and (AREA_WAYS[way["way"]] or "area" in way) and not area_ok(way.get("area")):
+                errors.append(f"{at}: the way {way['way']} needs an area: left, top, right, bottom in thousandths")
     for word in kind.get("words", []):
         if not isinstance(word.get("weight"), int) or word["weight"] < 1 or not str(word.get("word", "")).strip():
             errors.append(f"{where}: not a word with a whole weight: {word!r}")
