@@ -36,12 +36,17 @@ template's ID is `<author>.<name>`.
 
 ## Using a template
 
-- **Web app:** *Kinds* → *Import template …* → choose a `template.json`.
-- **Terminal:** `K`, then the path of the file.
-- **API:** `POST /api/v1/spaces/{space}/kind-import` with the file as the body.
+- **Web app:** *Kinds* → *From a catalog …* – the templates of this catalog and of any other source you added in
+  *Settings → Sources of templates*. Look at what a template would do in the space, kind by kind, then take it over.
+- **Terminal:** `C`, then the number of the template.
+- **Command line:** `aktujo templates` lists this catalog; `aktujo templates take aktujo.paperwork --space <space>`
+  takes a template over.
+- **A file:** *Kinds* → *Import template …* with a `template.json`, or `K` in the terminal.
 
-A kind with the same identity as one in the space replaces it; the others stay. *Export kinds* writes the kinds of a
-space in the same form. OPEN: browsing this catalog from within aktujo.
+aktujo reads a catalog only when you open it. A kind taken over remembers its template; when the template changes,
+aktujo offers the update and keeps what you changed in the kind (a three-way merge – where you and the template
+changed the same thing, yours stays and both are shown). Nothing is removed on its own. The official catalog can be
+switched off in the settings.
 
 ## `template.json`
 

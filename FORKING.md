@@ -29,4 +29,6 @@ templates/<author>/<name>/template.json
 tools/catalog.py
 ```
 
-OPEN: adding a catalog as a source in aktujo; today a template is imported as a file.
+In aktujo, add the source in *Settings → Sources of templates* with its address – `https://github.com/<you>/catalog`
+(another branch: `…/tree/<branch>`), or any HTTPS address of the folder with `catalog.json`. Templates from it are
+marked as not reviewed by the aktujo team.
